@@ -1,0 +1,260 @@
+/* ---------- Base Styling ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0d1117;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* ---------- Header ---------- */
+header {
+  width: 100%;
+  padding: 20px 10%;
+  background: #161b22;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8em;
+  color: #00ffff;
+  font-weight: 600;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00ffff;
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+}
+
+.hero-text h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero-text h2 {
+  font-size: 1.8em;
+  color: #00ffff;
+  border-right: 2px solid #00ffff;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(25, end) infinite alternate;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 410px; }
+}
+
+.hero-text button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: none;
+  background: #00ffff;
+  color: #000;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-text button:hover {
+  background: #fff;
+}
+
+.hero-img img {
+  width: 380px;
+  height: 380px;
+  border-radius: 8%;
+  box-shadow: 2px 2px 25px rgb(244, 247, 247);
+  object-fit: cover;
+}
+
+/* ---------- Section General ---------- */
+section {
+  padding: 100px 10%;
+}
+
+.section-title {
+  text-align: center;
+  color: #00ffff;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* ---------- About ---------- */
+.about p {
+  max-width: 700px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+/* ---------- Skills ---------- */
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.skill {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #00ffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.skill img {
+  width: 50px;
+  transition: 0.3s;
+}
+
+.skill span {
+  position: absolute;
+  opacity: 0;
+  color: #00ffff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.skill:hover img {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.skill:hover span {
+  opacity: 1;
+}
+
+/* ---------- Projects ---------- */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-card, {
+  background: #161b22;
+  border: 1px solid #00ffff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  color: #00ffff;
+  margin-bottom: 10px;
+}
+
+.project-buttons a {
+  text-decoration: none;
+  color: #000;
+  background: #00ffff;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.project-buttons a:hover {
+  background: #fff;
+}
+.project-image1 {
+  width: 80%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 2px 2px 15px rgba(0, 255, 255, 0.5);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: #161b22;
+  text-align: center;
+  padding: 30px 10%;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  color: #00ffff;
+  margin: 0 10px;
+  font-size: 1.4em;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+/* ---------- Scroll Reveal Animation ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  .hero-text, .hero-img {
+    max-width: 100%;
+  }
+}
