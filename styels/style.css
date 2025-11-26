@@ -262,3 +262,9 @@ footer p {
     grid-template-columns: auto;
   }
 }
+@media screen and (min-width:769px) and (max-width:1550px){
+  .project-buttons{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+}
