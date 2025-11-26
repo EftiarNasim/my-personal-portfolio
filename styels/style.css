@@ -20,7 +20,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 1000;
 }
@@ -172,7 +172,7 @@ section {
   gap: 30px;
 }
 
-.project-card, {
+.project-card {
   background: #161b22;
   border: 1px solid #00ffff;
   padding: 20px;
@@ -249,12 +249,16 @@ footer p {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
-  .hero {
+  .hero ,nav >ul{
     flex-direction: column;
     text-align: center;
     gap: 30px;
   }
   .hero-text, .hero-img {
     max-width: 100%;
+  }
+  .project-buttons{
+    display: grid;
+    grid-template-columns: auto;
   }
 }
