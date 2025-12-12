@@ -94,8 +94,8 @@ nav ul li a:hover {
 }
 
 .hero-img img {
-  width: 380px;
-  height: 380px;
+  width: 480px;
+  height: 580px;
   border-radius: 8%;
   box-shadow: 2px 2px 25px rgb(244, 247, 247);
   object-fit: cover;
