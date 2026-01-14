@@ -101,6 +101,22 @@ nav ul li a:hover {
   object-fit: cover;
 }
 
+/* ---------- Responsive for Hero Image ---------- */
+@media (max-width: 1024px) {
+  .hero-img img {
+    width: 350px;
+    height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-img img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+  }
+}
+
 /* ---------- Section General ---------- */
 section {
   padding: 100px 10%;
